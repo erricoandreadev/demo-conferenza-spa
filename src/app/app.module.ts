@@ -11,13 +11,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { PostListComponent } from './components/post-list/post-list.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { UsersComponent } from './components/users/users.component';
+import { AppRoutingModule } from './app-routing.module';
 
-
-const routes: Routes = [
-  { path: '', component: WelcomeComponent },
-  { path: 'blog', component: PostListComponent },
-  { path: 'users', component: UsersComponent }
-];
 
 
 @NgModule({
@@ -34,7 +29,7 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
