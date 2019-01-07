@@ -1,0 +1,22 @@
+<!--
+<ul class="list">
+  <li>
+    <app-post></app-post>
+  </li>
+  <li>
+    <app-post></app-post>
+  </li>
+  <li>
+    <app-post></app-post>
+  </li>
+  <li>
+    <app-post></app-post>
+  </li>
+</ul>
+-->
+
+<ul class="list">
+    <li *ngFor="let post of posts">
+      <app-post-child [post]="post"></app-post-child >
+    </li>
+  </ul>
