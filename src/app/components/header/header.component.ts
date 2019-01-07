@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.numPosts = this.postService.getPosts().length;
+    this.postService.getPosts().subscribe(data => this.numPosts = data.length);
   }
 
 }
