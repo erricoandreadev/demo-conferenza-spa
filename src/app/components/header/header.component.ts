@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PostService } from 'src/app/services/post.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  numPosts: number = null;
+
+  constructor(
+    private postService: PostService
+  ) { }
 
   ngOnInit() {
+    this.numPosts = this.postService.getPosts().length;
   }
 
 }
